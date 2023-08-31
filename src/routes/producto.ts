@@ -14,4 +14,5 @@ router.post("/", createProduct);
 router.get('/',getActiveProducts);
 router.get('/inactivo',getInactiveProducts);
 
+
 export { router };
