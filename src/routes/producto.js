@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+//import  multer  from "multer";
+const productosController_1 = require("../controllers/productosController");
+// const storage = multer.memoryStorage();
+// const uploadProfileImg = multer({ storage }).single("profileimg");
+const router = (0, express_1.Router)();
+exports.router = router;
+//router.get("/",getItems);
+//const upload = multer({ storage: storage });
+router.post("/", productosController_1.createProduct);
+router.get('/', productosController_1.getActiveProducts);
+router.get('/inactivo', productosController_1.getInactiveProducts);
