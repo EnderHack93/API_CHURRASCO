@@ -4,11 +4,12 @@
   "description": "ES UNA CHURRASQUERIA MAMONA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/app.ts",
-    "build": "tsc",
-    "start": "node dist/index.ts"
-  },
+		"dev": "pnpm /dev:.*/",
+		"dev:build": "esbuild dev.ts ./src --bundle --outdir=dist --packages=external --platform=node --sourcemap --watch",
+		"dev:run": "node --inspect -r ./dist/dev.js --watch dist/src",
+		"build": "esbuild index=./src --bundle --minify --outdir=dist --packages=external --platform=node",
+		"start": "node dist"
+	},
   "author": "YO PS QUIEN MAS",
   "license": "ISC",
   "engines": {
