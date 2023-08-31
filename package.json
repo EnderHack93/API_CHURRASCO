@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./src/app.ts",
     "build": "npm i tsc",
-    "start": "node ./src/app.js"
+    "start": "node ./src/app.ts"
   },
+  "type": "module",
   "author": "YO PS QUIEN MAS",
   "license": "ISC",
   "engines": {
