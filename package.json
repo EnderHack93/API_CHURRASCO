@@ -9,6 +9,7 @@
     "build": "tsc",
     "start": "node ./src/app.ts"
   },
+  "type": "module",
   "author": "YO PS QUIEN MAS",
   "license": "ISC",
   "engines": {
